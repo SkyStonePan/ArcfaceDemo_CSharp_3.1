@@ -267,13 +267,13 @@ namespace ArcSoftFace
                 combinedMask = FaceEngineMask.ASF_FACE_DETECT | FaceEngineMask.ASF_FACERECOGNITION | FaceEngineMask.ASF_LIVENESS | FaceEngineMask.ASF_IMAGEQUALITY;
                 retCode = videoRGBImageEngine.ASFInitEngine(detectMode, imageDetectFaceOrientPriority, detectFaceScaleVal, detectFaceMaxNum, combinedMask);
                 //设置活体阈值
-                videoRGBImageEngine.ASFSetLivenessParam(0.05f);
+                videoRGBImageEngine.ASFSetLivenessParam(0.5f);
 
                 //IR视频专用FR引擎
                 combinedMask = FaceEngineMask.ASF_FACE_DETECT | FaceEngineMask.ASF_FACERECOGNITION | FaceEngineMask.ASF_IR_LIVENESS| FaceEngineMask.ASF_IMAGEQUALITY;
                 retCode = videoIRImageEngine.ASFInitEngine(detectModeVideo, imageDetectFaceOrientPriority, detectFaceScaleVal, detectFaceMaxNum, combinedMask);
                 //设置活体阈值
-                videoIRImageEngine.ASFSetLivenessParam(0.5f, 0.07f);
+                videoIRImageEngine.ASFSetLivenessParam(0.5f, 0.7f);
 
                 initVideo();
             }
